@@ -1,5 +1,11 @@
+# revision 15878
+# category Package
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-otibet
-Version:	20111102
+Version:	20111103
 Release:	1
 Summary:	TeXLive otibet package
 Group:		Publishing
@@ -87,6 +93,7 @@ TeXLive otibet package.
 %doc %{_texmfdistdir}/source/latex/otibet/tibovp.scm
 %doc %{_texmfdistdir}/source/latex/otibet/unidoc.odvi
 %doc %{_texmfdistdir}/source/latex/otibet/yugpacan.odvi
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -97,3 +104,5 @@ TeXLive otibet package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts omega tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
