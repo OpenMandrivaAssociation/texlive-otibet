@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-otibet
 Version:	20111103
-Release:	4
+Release:	5
 Summary:	TeXLive otibet package
 Group:		Publishing
 URL:		http://tug.org/texlive
