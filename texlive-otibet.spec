@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-otibet
-Version:	20111103
-Release:	10
+Version:	20171114
+Release:	1
 Summary:	TeXLive otibet package
 Group:		Publishing
 URL:		http://tug.org/texlive
