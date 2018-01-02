@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-otibet
 Version:	20171114
 Release:	1
@@ -32,57 +26,17 @@ TeXLive otibet package.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/ofm/public/otibet/otibetan.ofm
-%{_texmfdistdir}/fonts/ovf/public/otibet/otibetan.ovf
-%{_texmfdistdir}/fonts/ovp/public/otibet/otibetan.ovp
-%{_texmfdistdir}/fonts/source/public/otibet/bzrsetup.mf
-%{_texmfdistdir}/fonts/source/public/otibet/tibetan.mf
-%{_texmfdistdir}/fonts/tfm/public/otibet/tibetan.tfm
-%{_texmfdistdir}/omega/ocp/otibet/tibadjusttsheg.ocp
-%{_texmfdistdir}/omega/ocp/otibet/tibinunicode.ocp
-%{_texmfdistdir}/omega/ocp/otibet/tibinwylie.ocp
-%{_texmfdistdir}/omega/ocp/otibet/tibout.ocp
-%{_texmfdistdir}/omega/ocp/otibet/tibspecial.ocp
-%{_texmfdistdir}/omega/ocp/otibet/tibuniuni.ocp
-%{_texmfdistdir}/omega/ocp/otibet/tibvowel.ocp
-%{_texmfdistdir}/omega/otp/otibet/tibadjusttsheg.otp
-%{_texmfdistdir}/omega/otp/otibet/tibetan-mule2uni-old.otp
-%{_texmfdistdir}/omega/otp/otibet/tibetan-mule2uni.otp
-%{_texmfdistdir}/omega/otp/otibet/tibinunicode.otp
-%{_texmfdistdir}/omega/otp/otibet/tibinwylie.otp
-%{_texmfdistdir}/omega/otp/otibet/tibout.otp
-%{_texmfdistdir}/omega/otp/otibet/tibshow.otp
-%{_texmfdistdir}/omega/otp/otibet/tibspecial.otp
-%{_texmfdistdir}/omega/otp/otibet/tibuniuni.otp
-%{_texmfdistdir}/omega/otp/otibet/tibvowel.otp
-%{_texmfdistdir}/tex/latex/otibet/ot1tib.fd
-%{_texmfdistdir}/tex/latex/otibet/otibet.sty
-%{_texmfdistdir}/tex/latex/otibet/otibet.tex
-%{_texmfdistdir}/tex/latex/otibet/t1tib.fd
-%doc %{_texmfdistdir}/doc/latex/otibet/README
-%doc %{_texmfdistdir}/doc/latex/otibet/allbasic-mule.tex
-%doc %{_texmfdistdir}/doc/latex/otibet/allbasic.dvi
-%doc %{_texmfdistdir}/doc/latex/otibet/allbasic.tex
-%doc %{_texmfdistdir}/doc/latex/otibet/otibet-mule.tex
-%doc %{_texmfdistdir}/doc/latex/otibet/testtib.tex
-%doc %{_texmfdistdir}/doc/latex/otibet/tiblatex.dvi
-%doc %{_texmfdistdir}/doc/latex/otibet/tiblatex.tex
-%doc %{_texmfdistdir}/doc/latex/otibet/unidoc.dvi
-%doc %{_texmfdistdir}/doc/latex/otibet/unidoc.tex
-%doc %{_texmfdistdir}/doc/latex/otibet/yugpacan.dvi
-%doc %{_texmfdistdir}/doc/latex/otibet/yugpacan.tex
+%{_texmfdistdir}/fonts/ofm/public/otibet
+%{_texmfdistdir}/fonts/ovf/public/otibet
+%{_texmfdistdir}/fonts/ovp/public/otibet
+%{_texmfdistdir}/fonts/source/public/otibet
+%{_texmfdistdir}/fonts/tfm/public/otibet
+%{_texmfdistdir}/omega/ocp/otibet
+%{_texmfdistdir}/omega/otp/otibet
+%{_texmfdistdir}/tex/latex/otibet
+%doc %{_texmfdistdir}/doc/latex/otibet
 #- source
-%doc %{_texmfdistdir}/source/latex/otibet/Makefile
-%doc %{_texmfdistdir}/source/latex/otibet/allbasic.odvi
-%doc %{_texmfdistdir}/source/latex/otibet/convnum.scm
-%doc %{_texmfdistdir}/source/latex/otibet/generate-otp.el
-%doc %{_texmfdistdir}/source/latex/otibet/oct2otp.c
-%doc %{_texmfdistdir}/source/latex/otibet/pl2ovp.scm
-%doc %{_texmfdistdir}/source/latex/otibet/tibetan.pl
-%doc %{_texmfdistdir}/source/latex/otibet/tiblatex.odvi
-%doc %{_texmfdistdir}/source/latex/otibet/tibovp.scm
-%doc %{_texmfdistdir}/source/latex/otibet/unidoc.odvi
-%doc %{_texmfdistdir}/source/latex/otibet/yugpacan.odvi
+%doc %{_texmfdistdir}/source/latex/otibet
 
 #-----------------------------------------------------------------------
 %prep
@@ -93,17 +47,3 @@ TeXLive otibet package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts omega tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111103-2
-+ Revision: 754558
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111103-1
-+ Revision: 719171
-- texlive-otibet
-- texlive-otibet
-- texlive-otibet
-- texlive-otibet
-
