@@ -1,5 +1,5 @@
 Name:		texlive-otibet
-Version:	20171114
+Version:	20180303
 Release:	1
 Summary:	TeXLive otibet package
 Group:		Publishing
