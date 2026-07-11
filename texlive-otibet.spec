@@ -1,50 +1,20 @@
-Name:		texlive-otibet
-Version:	45777
-Release:	2
-Summary:	TeXLive otibet package
+%global tl_name otibet
+%global tl_revision 45777
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
+Summary:	support for Tibetan using Omega
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/otibet.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/otibet.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/otibet.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/otibet
+License:	LPPL
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/otibet.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/otibet.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/otibet.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive otibet package.
+support for Tibetan using Omega
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/fonts/ofm/public/otibet
-%{_texmfdistdir}/fonts/ovf/public/otibet
-%{_texmfdistdir}/fonts/ovp/public/otibet
-%{_texmfdistdir}/fonts/source/public/otibet
-%{_texmfdistdir}/fonts/tfm/public/otibet
-%{_texmfdistdir}/omega/ocp/otibet
-%{_texmfdistdir}/omega/otp/otibet
-%{_texmfdistdir}/tex/latex/otibet
-%doc %{_texmfdistdir}/doc/latex/otibet
-#- source
-%doc %{_texmfdistdir}/source/latex/otibet
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar fonts omega tex doc source %{buildroot}%{_texmfdistdir}
